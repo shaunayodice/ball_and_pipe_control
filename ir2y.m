@@ -16,6 +16,11 @@ ir_top    = .055; % "                        " top of pipe
 y_top     = 0.9144; % Ball at top of the pipe [m]
 
 %% Bound the IR reading and send error message 
+if ir > 4095
+    ir = UB;
+elseif ir < 0
+    ir = 0;
+end
 % (remeber the IR values are inverted ie small values == large height and large values == small height)
 % 55mm top, 951 mm at bottom 
 %% Set
