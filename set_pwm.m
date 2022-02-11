@@ -10,11 +10,29 @@ function action = set_pwm(device, pwm_value)
 % Created by:  Kyle Naddeo 2/4/2022
 % Modified by: YOUR NAME and DATE
 
+
+
 %% Force PWM value to be valid
 % pwm_value = % Bound value to limits 0 to 4095
 
+LB = 0;
+UB = 4095;
+
+if pwm_value > UB
+    pwm_value = UB;
+elseif pwm_value < LB
+    pwm_value = LB;
+end
+
 %% Send Command
 % action = % string value of pwm_value
+
+str = 'P';
+action = sprintf('%04.f', pwm_value);
+action = str + action;
+
 % use the serialport() command options to change the PWM value to action
+
+write(device,action, "string");
 
 end
