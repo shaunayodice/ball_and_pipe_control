@@ -25,12 +25,8 @@ elseif pwm_value < LB
 end
 
 %% Send Command
-% action = % string value of pwm_value
-
-str = 'P';
 action = sprintf('%04.f', pwm_value);
-action = str + action;
-
+action = ['P', action]
 % use the serialport() command options to change the PWM value to action
 
 write(device,action, "string");
