@@ -17,8 +17,10 @@ target      = 0.5;   % Desired height of the ball [m]
 sample_rate = 0.25;  % Amount of time between controll actions [s]
 
 %% Give an initial burst to lift ball and keep in air
+% set_pwm(device,0); % Initial burst to pick up ball
+% pause(0)
 set_pwm(device, 4000); % Initial burst to pick up ball
-pause(0.1) % Wait 0.1 seconds
+pause(0.99) % Wait 0.1 seconds
 set_pwm(device, 2000); % Set to lesser value to level out somewhere in
 % the pipe
 
@@ -30,8 +32,13 @@ error_sum   = 0;
 %% Feedback loop
 while true
     %% Read current height
+<<<<<<< HEAD
     [ir, distance, pwm, target, deadpan] = read_data(device);
     y = ir2y(ir); % Convert from IR reading to distance from bottom [m]
+=======
+%     [distance,~,target,deadpan] = read_data(device);
+%     y = ir2y(distance) % Convert from IR reading to distance from bottom [m]
+>>>>>>> c519c9cb90943547dfb6610138535769cc514a28
     
     %% Calculate errors for PID controller
     error_prev = error;             % D
