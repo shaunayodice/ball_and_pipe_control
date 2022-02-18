@@ -32,8 +32,8 @@ error_sum   = 0;
 %% Feedback loop
 while true
     %% Read current height
-    [ir, distance, pwm, target, deadpan] = read_data(device);
-    y = ir2y(ir); % Convert from IR reading to distance from bottom [m]
+    [distance, pwm, target, deadpan] = read_data(device);
+    y = ir2y(distance); % Convert from IR reading to distance from bottom [m]
 %     [distance,~,target,deadpan] = read_data(device);
 %     y = ir2y(distance) % Convert from IR reading to distance from bottom [m]
 
@@ -47,6 +47,13 @@ while true
     prev_action = action;
     %action = % Come up with a scheme no answer is right but do something
     % set_pwm(add_proper_args); % Implement action
+
+
+    read_data(device);
+    set_pwm(device, 1000);
+    pause(0.1);
+    set_pwm(device, 3000);
+    read_data(device);
         
     % Wait for next sample
     pause(sample_rate)
