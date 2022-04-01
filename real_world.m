@@ -49,6 +49,21 @@ while true
     % set_pwm(add_proper_args); % Implement action
 
 
+
+    % Q- Learning
+
+    % create Q table
+
+    Q = rltable(s,a);
+
+    %s is the states and a is the actions
+
+    % initialze all locations in the qtable to zero
+    Q(s,a) = 0;
+
+
+
+
     read_data(device);
     set_pwm(device, 1000);
     pause(0.1);
