@@ -26,7 +26,7 @@ action_size = 3;
 
 
 %dont think this is right. Need to select a random next Q
-Q = randperm(state_size,action_size);
+Q = rand(state_size,action_size);
 
 
     for i = 1:num_episodes
@@ -53,7 +53,7 @@ Q = randperm(state_size,action_size);
     
             % a = learning rate - not sure what to make this
             % y = discount factor - not sure what to make this
-            a = 00;
+            a = 0.01;
             y = 0.1;
     
             Q = bellman_eq(Q, R , S , next_state, a, y);

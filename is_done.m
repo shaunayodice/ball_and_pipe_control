@@ -4,10 +4,9 @@
 % modified on 4/8
 
 
-function [match] = is_done(S)
+function match = is_done(S)
 
-% variable to keep track of whether the ball is where we want
-match = 0;
+
 
 
 % need to define the desired location of the ball
