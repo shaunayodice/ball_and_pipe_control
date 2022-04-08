@@ -1,3 +1,6 @@
+
+function Q = q_learning(P_bins, V_bins, F_bins)
+
 %% q_learning function
 % created by Shauna Yodice
 % Edited on 04/08
@@ -5,7 +8,6 @@
 
 
 
-function q_learning = q_learning(P_bins, V_bins, F_bins)
 
 % not sure what to set this value to 
 num_episodes = 0;
@@ -19,8 +21,8 @@ is_done_now = 0;
 state_size = perms(length(P_bins), length(V_bins), length(F_bins));
 
 
-% action size = # of actions
-action_size = 0;
+% action size = # of actions - up, down, stay ?
+action_size = 3;
 
 
 %dont think this is right. Need to select a random next Q
@@ -37,7 +39,7 @@ Q = randperm(state_size,action_size);
     
             % pass through the env
     
-            S' = set_pwm(device, action);
+            next_state = set_pwm(device, action);
             is_done_now = is_done();
     
             % check to see if the ball is where we want it to be
@@ -54,11 +56,11 @@ Q = randperm(state_size,action_size);
             a = 00;
             y = 0.1;
     
-            Q = bellman_eq(Q, R , S , S', a, y);
+            Q = bellman_eq(Q, R , S , next_state, a, y);
     
             % update the state to the next state
     
-            S = S';
+            S = next_state;
     
         end
     end

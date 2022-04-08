@@ -1,6 +1,6 @@
 
 
-function get_reward[reward] = get_reward(S')
+function [reward] = get_reward(next_state)
 
 % set the end point desired
 terminal = 00;
@@ -9,7 +9,7 @@ terminal = 00;
 reward = 0;
 
 
-    if S' ~= terminal
+    if next_state ~= terminal
         reward = -1;
         return
     else
