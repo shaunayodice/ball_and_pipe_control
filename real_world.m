@@ -52,14 +52,12 @@ while true
 
     % Q- Learning
 
-    % create Q table
 
-    Q = rltable(s,a);
+   
 
-    %s is the states and a is the actions
+    
+    %s = rlNumericSpec([])
 
-    % initialze all locations in the qtable to zero
-    Q(s,a) = 0;
 
 
 
