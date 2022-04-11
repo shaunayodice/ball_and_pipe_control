@@ -56,7 +56,7 @@ Q = rand(state_size,action_size);
             a = 0.01;
             y = 0.1;
     
-            Q = bellman_eq(Q, R , S , next_state, a, y);
+            Q = bellmans(Q, R , S , next_state, a, y);
     
             % update the state to the next state
     
