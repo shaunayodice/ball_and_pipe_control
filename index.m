@@ -1,8 +1,10 @@
-p_bins=0: y_top/20: y_top;
+function index = index(p_bins, v_bins, f_bins)
 
-v_bins = min_v: max_v/20: max_v;
+%p_bins=0: y_top/20: y_top;
 
-state_spaceSize = perm(p_bins, v_bins);
+%v_bins = min_v: max_v/20: max_v;
+
+state_spaceSize = perm(p_bins, v_bins, f_bins);
 
 s1_bins=[0,1];
 s2_bins=[0,1];
