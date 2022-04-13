@@ -8,7 +8,9 @@ s1_bins=[0,1];
 s2_bins=[0,1];
 s3_bins = [0,1];
 
-index_table = zeros(state_size, state_v);
+state_variables = 3;
+
+index_table = zeros(state_size, state_variables);
 
 s1_counter = 1;
 s2_counter = 1;
