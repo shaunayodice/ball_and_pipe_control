@@ -10,5 +10,11 @@ To implement this in MATLAB, the first step is to establish the control variable
 1. 
 
 # Contact
+Matthew Buchinski: buchin84@students.rowan.edu
+
+
+
+
 
 # Acknowledgements
+Sources
