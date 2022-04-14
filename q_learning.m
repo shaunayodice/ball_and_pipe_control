@@ -10,7 +10,7 @@ function Q = q_learning(P_bins, V_bins, F_bins)
 
 
 % not sure what to set this value to 
-num_episodes = 0;
+num_episodes = 10;
 
 % time limit for system to converge
 time_limit = 100;
@@ -30,20 +30,27 @@ Q = rand(state_size,action_size);
 
 
     for i = 1:num_episodes
-        % select state
+        % select state starting position
     
         S = sample_state();
     
         for j = 1:time_limit
-            action = get_action(S, Q);
+
+            % possible actions
+            actions = find(get_reward(S) ~= 0);
+
+            next_state = actions(randi([1 length(actions)], 1, 1));
     
             % pass through the env
     
-            next_state = set_pwm(device, action);
+            % next_state = set_pwm(device, action);
             is_done_now = is_done();
     
             % check to see if the ball is where we want it to be
-            if is_done_now == 1 end
+            if is_done_now == 1 
+            end
+            
+
     
             % call to get reward function
     

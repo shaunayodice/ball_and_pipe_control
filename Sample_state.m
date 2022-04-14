@@ -13,4 +13,4 @@ F_sample = F_bins(rand(Len_F));
 
 
 
-Sample = cat(P_sample, V_sample, F_sample)
+Sample = cat(P_sample, V_sample, F_sample);

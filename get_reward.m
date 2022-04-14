@@ -3,9 +3,7 @@
 function reward = get_reward(next_state)
 
 % set the end point desired
-terminal = 00;
-
-
+terminal = 0.5;
 
     if next_state ~= terminal
         reward = -1;

@@ -14,7 +14,7 @@ device = serialport("COM3", 19200);
 
 %% Parameters
 target      = 0.5;   % Desired height of the ball [m]
-sample_rate = 0.25;  % Amount of time between controll actions [s]
+sample_rate = 0.25;  % Amount of time between controll actions [s] - TIMESTEP used for calculating the velocity
 
 %% Give an initial burst to lift ball and keep in air
 % set_pwm(device,0); % Initial burst to pick up ball
@@ -31,7 +31,7 @@ error_sum   = 0;
 
 %% Feedback loop
 while true
-    %% Read current height
+    %% Read current height -- replace this section with the lsim
     [distance, pwm, target, deadpan] = read_data(device);
     y = ir2y(distance); % Convert from IR reading to distance from bottom [m]
 %     [distance,~,target,deadpan] = read_data(device);
@@ -52,7 +52,7 @@ while true
 
     % Q- Learning
 
-
+    
    
 
     

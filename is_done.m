@@ -7,14 +7,12 @@
 function match = is_done(S)
 
 
-
-
 % need to define the desired location of the ball
-desired = 0; 
+desired = 0.5; 
 
 % check to see if the current position of the ball is the desired position
 
-    if desired == read_data(device)
+    if desired == ir2y(read_data(device))
         match = 1;
         return
     else
