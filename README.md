@@ -36,7 +36,7 @@ The position of the ball will be divided into 21 spots, from 0 to 20. Each posit
 
 # Contact
 Matthew Buchinski: buchin84@students.rowan.edu \
-Yazhini Kumaravadivlan:  kumara26@students.rowan.edu \
+Yazhini Kumaravadivelan:  kumara26@students.rowan.edu \
 Oscar Mahecha: mahech38@students.rowan.edu \
 Shauna Yodice: yodice13@students.rowan.edu
 
