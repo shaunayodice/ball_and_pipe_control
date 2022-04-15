@@ -1,9 +1,21 @@
 
-function Q = q_learning(P_bins, V_bins, F_bins)
-
-%% q_learning function
-% created by Shauna Yodice
+%% q_learning Function
+%
+%
+% Created By: Shauna Yodice
+%
+%
 % Edited on 04/08
+%
+%
+% Purpose: The purpose of this function is to implement the functionality
+% of q leanrning. In this function, it calls to all the other functions
+% that were created for the individual parts of the reinforment learning
+
+
+
+
+function Q = q_learning(P_bins, V_bins, F_bins)
 
 
 % set initial value for R to 0
@@ -32,10 +44,12 @@ for j=1:length(P_bins)
     end
 end
 
+
+% variable state state which stores a value for the size of all the states
 state_size = perms(length(P_bins), length(V_bins), length(F_bins));
 
 
-% action size = # of actions - up, down, stay ?
+% action size = # of actions - up, down, stay
 action_size = 3;
 
 
@@ -57,22 +71,33 @@ Q = repmat(R,[length(P_bins) * length(V_bins)*length(F_bins)*action size]);
             % possible actions
             % actions = find(get_reward(S) ~= 0);
 
+            % calls to get action function to get the action from the given parameters at this point 
             actions = get_action(episodes, num_episodes, Q, action_size, P_bins, V_bins, F_bins);
-
+            
+            % picks a random next state to try
             next_state = actions(randi([1 length(actions)], 1, 1));
     
             % pass through the env
+            simulation();
+
     
-            % next_state = set_pwm(device, action);
+            % is done now is a variable used to check if the ball is where
+            % we want it to be. is_done will return 1 if the ball is where
+            % we want and 0 otherewise
             is_done_now = is_done();
     
-            % check to see if the ball is where we want it to be
+            % check to see if the ball is where we want it to be, if so
+            % break the for loop
             if is_done_now == 1 
+                break;
             end
             
 
     
-            % call to get reward function
+            % call to get reward function. takes in the next state to see
+            % if it is going to be where we want it. The reward will be 1
+            % if that is the case. If it is not going to the terminal
+            % location the reward is -1.
     
             R = get_reward(next_state);
     
