@@ -25,7 +25,9 @@ Steps (Need a step for simulation, not sure of the exact order)
 Hightlight: errors with snippets of code, why the error is being caused and what we would do to fix it
 1. Binned State
 2. Sample State
+3. State Space Size
 
+The position of the ball will be divided into 21 spots, from 0 to 20. Each position will be considered as a bin. In each case it will record a velocity pertaining to the bin. The state space size will be the number of permuations of each position and velocity. Instantiate S1 S2 S3 bins and the S1 S2 S3 counters. The we create a for loop that will increase the counters by 1 and set it as a parameter for each bin for everytime the ball position increases.
 
 4. Get Action
 5. Get Reward 
