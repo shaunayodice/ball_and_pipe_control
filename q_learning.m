@@ -64,7 +64,7 @@ Q = repmat(R,[length(P_bins) * length(V_bins)*length(F_bins)*action size]);
             % pass through the env
     
             % next_state = set_pwm(device, action);
-            is_done_now = is_done(S);
+            is_done_now = is_done();
     
             % check to see if the ball is where we want it to be
             if is_done_now == 1 

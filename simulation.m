@@ -2,7 +2,7 @@
 %% written by Shauna Yodice
 %% Modified on 4/14/2022
 
-%% NEED TO DO SOMETHING WITH THE D - 2700 BUT NOT SURE
+function simulation
 
 
 % assuming the mass of the ball is 0.01 kg
@@ -65,6 +65,13 @@ previous_states = [previous_states(end-2), previous_states(end)];
         end
     end
 
+    if pwm(1) < -2727.0447
+        pwm = [-2727.0447 -2727.0447];
+    elseif pwm(1) > 4000-2727.0447
+        pwm = [4000-2727.0447 4000-2727.0447];
+    end
+
+
 Y_vals(i) = Y(j);
 new = Y(j);
 old = Y_vals(j-1);
@@ -73,8 +80,14 @@ rewards(i) = current_reward;
 
 end
 
+%pwm_val = pwm_val + 2727.0447;
+
 figure(1) 
 plot(time,Y_vals)
 title('Y')
 grid on
+
+
+figure(2)
+plot(time,pwm_val)
 

@@ -1,10 +1,16 @@
 %% Is done function
-% checks to see if the ball is at the position we want
-% created by: Shauna Yodice
-% modified on 4/8
+%
+%
+% Purpose: Checks to see if the ball is at the position we want, if it 
+% is at the desired position, should return 1. If it does not match the
+% desired location, it returns 0
+%
+%
+% Created By: Shauna Yodice
+% Modified on: 4/8
 
 
-function match = is_done(S)
+function match = is_done()
 
 
 % need to define the desired location of the ball
@@ -16,6 +22,7 @@ desired = 0.5;
         match = 1;
         return
     else
+        match = 0;
         return
     end
 end
