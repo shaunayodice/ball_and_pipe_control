@@ -1,3 +1,16 @@
+%% Sample State Function
+%
+%
+% Created By: Yaz Kumaravadivelan
+%
+%
+% Modified By: Yaz
+%
+%
+% Modified On: 4/9
+
+
+
 function Sample = Sample_state(P_bins , V_bins , F_bins) 
 clear all;
 close all;
