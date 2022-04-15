@@ -27,4 +27,4 @@ F_sample = F_bins(rand(Len_F));% Formula for measureing the lenght of F bin.
 
 
 
-Sample = cat(P_sample, V_sample, F_sample); % Concatination operation to create matrix using the P_sample, V_sample and F_sample/
+Sample = cat(P_sample, V_sample, F_sample); % Concatination operation to create matrix using the P_sample, V_sample and F_sample
