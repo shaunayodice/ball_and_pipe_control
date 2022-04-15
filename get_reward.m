@@ -1,4 +1,7 @@
-
+%% reward function
+%% created by Shauna
+%% checks the state against the desired state and returns either 1 or -1
+%% modified on 4/11
 
 function reward = get_reward(next_state)
 
