@@ -33,10 +33,10 @@ Hightlight: errors with snippets of code, why the error is being caused and what
 7. Q learning - this is the file that calls all of these functions together
 
 # Contact
-Matthew Buchinski: buchin84@students.rowan.edu
-Yazhini Kumaravadivlan  kumara26@students.rowan.edu
-Oscar Mahecha: mahech38@students.rowan.edu
-
+Matthew Buchinski: buchin84@students.rowan.edu__
+Yazhini Kumaravadivlan  kumara26@students.rowan.edu__
+Oscar Mahecha: mahech38@students.rowan.edu__
+Shauna Yodice: yodie13@students.rowan.edu
 
 
 
