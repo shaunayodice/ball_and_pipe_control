@@ -5,7 +5,7 @@
 
 
 
-function index = index(p_bins, v_bins, f_bins)
+function index[index] = index(p_bins, v_bins, f_bins)
 
 %p_bins=0: y_top/20: y_top;
 
