@@ -26,11 +26,11 @@ current_reward = 0;
 % terminal position - where we want the ball to stay
 terminal = 0.5;
 
-runs = 10;
+runs = 5;
 time = 1:runs;
 explore = 0.9;
 previous_states = []; % create an empty array for the previous runs
-pwm = [0-2727.0447  4000-2727.0447]; % I dont know what PWM should have inside of it
+pwm = [4000-2727.0447  4000-2727.0447]; % I dont know what PWM should have inside of it
 
 
 Y_vals = zeros(1,runs);
@@ -65,7 +65,7 @@ previous_states = [previous_states(end-2), previous_states(end)];
         end
     end
 
-Y_vals(i) = Y(j)
+Y_vals(i) = Y(j);
 new = Y(j);
 old = Y_vals(j-1);
 current_reward = get_reward(new);
