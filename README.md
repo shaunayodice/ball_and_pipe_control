@@ -15,6 +15,7 @@ To implement this in MATLAB, the first step is to establish the control variable
 
 # Guide to use the code
 Steps (Need a step for simulation, not sure of the exact order)
+Hightlight: errors with snippets of code, why the error is being caused and what we would do to fix it
 1. Binned State
 2. Sample State
 3. Get Action
