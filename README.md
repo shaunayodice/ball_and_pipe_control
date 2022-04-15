@@ -34,9 +34,9 @@ Hightlight: errors with snippets of code, why the error is being caused and what
 
 # Contact
 Matthew Buchinski: buchin84@students.rowan.edu \
-Yazhini Kumaravadivlan  kumara26@students.rowan.edu \
+Yazhini Kumaravadivlan:  kumara26@students.rowan.edu \
 Oscar Mahecha: mahech38@students.rowan.edu \
-Shauna Yodice: yodie13@students.rowan.edu
+Shauna Yodice: yodice13@students.rowan.edu
 
 
 
