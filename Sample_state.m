@@ -1,6 +1,8 @@
 %% Sample State Function
 %
 %
+% Purpose: This function calculates the position of the sample 
+% based of the v , f and p bins. 
 % Created By: Yazhini Kumaravadivelan
 %
 %
@@ -11,7 +13,7 @@
 
 
 
-function Sample = Sample_state(P_bins , V_bins , F_bins) % Creates a function called Sample_state that uses variables V_bins, F_bins and P_bins
+function Sample = Sample_state(P_bins , V_bins , F_bins) % Creates a function called Sample_state that uses variables V_bins, F_bins and P_bins and calculate the position of the sample.
 clear all;
 close all;
 
