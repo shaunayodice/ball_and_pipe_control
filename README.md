@@ -8,8 +8,15 @@ Two parts: Background theory and brief application on MATLAB files
 
 Theory
 
+To better understand what Q learning is, it is important to first explain what reinforcement learning is. Reinforcement Learning is the idea of using artifical intelligence to achieve a goal in a complex environment. To train the machine to do what the programmer wants, artifical intelligence is implement to reward or penalize the agent based on an action it performs. By using this approach, it trains the agent in the environment to maximize the desired reward. 
+
+Q learning is a branch of Reinforcement Learning that uses Q values (also known as action values) to continually improve the learning behavior of the agent in an environment. This is done by using a Q-Table to guide the agent to make the best possible action at each state. A general guideline for implementing this type of algorithm is picture below:
+
+As seen from the figure before, the main steps are to initialize a Q-table, pick an action, perform it, and based on the result imrpvoe the the agent to meet the desired outcome. The Bellman's Equation..
+
 Application
 
+When it comes to implementing this into the project, the idea is that we want the ball to reach a certain spot within the pipe. In order to do this, the fan is trained to adjust its fan speed depending on where the ball is located. (Need more explanation on Q tables here). Then a random fan speed is selected by the programmer. Based on the readings for ball position and velocity, the agent will learn to adjust based on where the ball is located in the pipe. By using the Bellman's Equation and continually updating results in a Q-Table, we can create a simulation to adjust the fan speed properly. The algorithm will continue to loop until the ball stays constant at the spot in the pipe.
 
 To implement this in MATLAB, the first step is to establish the control variables of the system. These control variables are ball position (p), fan speed (f), and velocity (v). 
 
