@@ -1,6 +1,14 @@
 %% LSim for ball and pipe
-%% written by Shauna Yodice
-%% Modified on 4/14/2022
+%
+%
+% Created By: Shauna Yodice
+%
+%
+% Modified on: 4/15/2022
+%
+% 
+% Purpose: This function is used to implement lsim in MATLAB. We used the
+% transfer function and the state space model functions to implement this. 
 
 function simulation
 
@@ -26,11 +34,16 @@ current_reward = 0;
 % terminal position - where we want the ball to stay
 terminal = 0.5;
 
+% number of runs 
 runs = 5;
+% time frame
 time = 1:runs;
+% explore rate
 explore = 0.9;
 previous_states = []; % create an empty array for the previous runs
-pwm = [4000-2727.0447  4000-2727.0447]; % I dont know what PWM should have inside of it
+pwm = [4000-2727.0447  4000-2727.0447]; % I should not have values here, 
+% but I am not sure how to take the values from the agent and populate them in here. 
+% The array should have that information inside of it and use it in the simulation. 
 
 
 Y_vals = zeros(1,runs);
