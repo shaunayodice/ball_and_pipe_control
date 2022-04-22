@@ -15,7 +15,7 @@
 
 
 
-function Q = q_learning(P_bins, V_bins, F_bins)
+function [S,Q] = q_learning(P_bins, V_bins, F_bins)
 
 
 % set initial value for R to 0
