@@ -9,19 +9,19 @@
 close all; clc; clear device;
 
 %% Connect to device
-device = serialport("COM3", 19200);
+device = serialport("COM14", 19200);
 % s = serialport(3,19200);
 
 %% Parameters
 target      = 0.5;   % Desired height of the ball [m]
-sample_rate = 0.25;  % Amount of time between controll actions [s] - TIMESTEP used for calculating the velocity
+sample_rate = 0.25;  % Amount of time between controll actions [s]
 
 %% Give an initial burst to lift ball and keep in air
 % set_pwm(device,0); % Initial burst to pick up ball
 % pause(0)
 set_pwm(device, 4000); % Initial burst to pick up ball
 pause(0.99) % Wait 0.1 seconds
-set_pwm(device, 2000); % Set to lesser value to level out somewhere in
+set_pwm(device, 2645); % Set to lesser value to level out somewhere in
 % the pipe
 
 %% Initialize variables
@@ -31,7 +31,7 @@ error_sum   = 0;
 
 %% Feedback loop
 while true
-    %% Read current height -- replace this section with the lsim
+    %% Read current height
     [distance, pwm, target, deadpan] = read_data(device);
     y = ir2y(distance); % Convert from IR reading to distance from bottom [m]
 %     [distance,~,target,deadpan] = read_data(device);
@@ -49,19 +49,6 @@ while true
     % set_pwm(add_proper_args); % Implement action
 
 
-
-    % Q- Learning
-
-    
-   
-
-    
-    %s = rlNumericSpec([])
-
-
-
-
-
     read_data(device);
     set_pwm(device, 1000);
     pause(0.1);
@@ -71,4 +58,3 @@ while true
     % Wait for next sample
     pause(sample_rate)
 end
-
