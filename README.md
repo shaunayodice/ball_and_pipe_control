@@ -14,6 +14,8 @@ Q learning is a branch of Reinforcement Learning that uses Q values (also known 
 
 As seen from the figure before, the main steps are to initialize a Q-table, pick an action, perform it, and based on the result imrpvoe the the agent to meet the desired outcome. The Bellman's Equation..
 
+
+
 Application
 
 When it comes to implementing this into the project, the idea is that we want the ball to reach a certain spot within the pipe. In order to do this, the fan is trained to adjust its fan speed depending on where the ball is located. (Need more explanation on Q tables here). Then a random fan speed is selected by the programmer. Based on the readings for ball position and velocity, the agent will learn to adjust based on where the ball is located in the pipe. By using the Bellman's Equation and continually updating results in a Q-Table, we can create a simulation to adjust the fan speed properly. The algorithm will continue to loop until the ball stays constant at the spot in the pipe.
