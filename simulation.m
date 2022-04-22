@@ -10,7 +10,7 @@
 % Purpose: This function is used to implement lsim in MATLAB. We used the
 % transfer function and the state space model functions to implement this. 
 
-function simulation
+function simulation = simulation(Q,s)
 
 
 % assuming the mass of the ball is 0.01 kg
@@ -59,11 +59,23 @@ D = sym2poly(s*(s+c2));
 
 TF = tf(N, D);
 
-state_space = ss(TF);
+state_space = ss(TF)
+
+a = get_action(Q,S);
+
+
+
+actions = [a a];
+
+ [distance, pwm, target, deadpan] = read_data(device);
+ y = ir2y(distance);
+
+ x = state_space.C\(y - state_space.D*a);
+
 
 for i = 1:runs
 pwm_val(i) = pwm(1); % need to set the intiial PWM val 
-[Y,X,previous_states] = lsim(state_space,pwm, sample_rate, previous_states);
+[X,Y,~] = lsim(state_space,sample_rate,actions,x);
 previous_states = [previous_states(end-2), previous_states(end)];
 
     %need to bound Y val to under 1 and above 0
@@ -78,11 +90,6 @@ previous_states = [previous_states(end-2), previous_states(end)];
         end
     end
 
-    if pwm(1) < -2727.0447
-        pwm = [-2727.0447 -2727.0447];
-    elseif pwm(1) > 4000-2727.0447
-        pwm = [4000-2727.0447 4000-2727.0447];
-    end
 
 
 Y_vals(i) = Y(j);
