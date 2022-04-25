@@ -10,7 +10,10 @@ Theory
 
 To better understand what Q learning is, it is important to first explain what reinforcement learning is. Reinforcement Learning is the idea of using artificial intelligence to achieve a goal in a complex environment. To train the machine to do what the programmer wants, artificial intelligence is implemented to reward or penalize the agent based on an action it performs. By using this approach, it trains the agent in the environment to maximize the desired reward. 
 
-Q learning is a branch of Reinforcement Learning that uses Q values (also known as action values) to continually improve the learning behavior of the agent in an environment. This is done by using a Q-Table to guide the agent to make the best possible action at each state. A general guideline for implementing this type of algorithm is picture below:
+Q learning is a branch of Reinforcement Learning that uses Q values (also known as action values) to continually improve the learning behavior of the agent in an environment. This is done by using a Q-Table to guide the agent to make the best possible action at each state. A general guideline for implementing this type of algorithm is pictured below:
+
+![image](https://user-images.githubusercontent.com/85361948/165179507-81ee6117-67b9-4d05-855f-4b4429737a4b.png)
+
 
 As seen from the figure before, the main steps are to initialize a Q-table, pick an action, perform it, and based on the result improve the agent to meet the desired outcome. The Bellman's Equation..
 
