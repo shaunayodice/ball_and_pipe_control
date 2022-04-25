@@ -20,7 +20,7 @@ When it comes to implementing this into the project, the idea is that we want th
 
 To implement this in MATLAB, the first step is to establish the control variables of the system. These control variables are ball position (p), fan speed (f), and velocity (v). 
 
-# Guide to use the code —---------------------------------------------------------- 
+# Guide to use the code 
 Steps (Need a step for simulation, not sure of the exact order)
 Highlight: errors with snippets of code, why the error is being caused and what we would do to fix it
 
@@ -56,10 +56,7 @@ Bellman's Equation is needed to be defined in Matlab and by looking at the figur
 
 ![image](https://user-images.githubusercontent.com/85361948/165178025-aa40c955-267b-4b74-a1b6-95fa9368b7a2.png)
 
-
-
 Q is the product of the state and action which is just defined as function Q = bellmans(Q, r, s, next_state, a, y). In this case you want to define variables such as r, s, next_state, a and y. Q(idx0,:) = Q(idx0,:) + a*(r + y*max(Q(idx,:)) - Q(idx0,:)); Here are all the parameters Q and all the values in the array. The last step for this code is to equate ‘s’ with ‘next_state.’ 
-
 
 
 7. Q learning - this is the file that calls all of these functions together. 
