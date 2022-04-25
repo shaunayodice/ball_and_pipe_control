@@ -81,9 +81,9 @@ Richard Rivera: rivera156@students.rowan.edu
 
 
 # Acknowledgements / References
-“Q-learning,” Wikipedia, 30-Jan-2022. [Online]. Available: https://en.wikipedia.org/wiki/Q-learning. [Accessed: 18-Feb-2022]. \
-C. Shyalika, “A beginners guide to Q-learning,” Medium, 13-Jul-2021. [Online]. Available: https://towardsdatascience.com/a-beginners-guide-to-q-learning-c3e2a30a653c. [Accessed: 18-Feb-2022]. \
-V. Ganapathy, Soh Chin Yun and Halim Kusama Joe, "Neural Q-Learning controller for mobile robot," 2009 IEEE/ASME International Conference on Advanced Intelligent Mechatronics, 2009, pp. 863-868, doi: 10.1109/AIM.2009.5229901
+1. "Q-learning," Wikipedia, 30-Jan-2022. [Online]. Available: https://en.wikipedia.org/wiki/Q-learning. [Accessed: 18-Feb-2022]. \
+2.  C. Shyalika, “A beginners guide to Q-learning,” Medium, 13-Jul-2021. [Online]. Available: https://towardsdatascience.com/a-beginners-guide-to-q-learning-c3e2a30a653c. [Accessed: 18-Feb-2022]. \
+3.  V. Ganapathy, Soh Chin Yun and Halim Kusama Joe, "Neural Q-Learning controller for mobile robot," 2009 IEEE/ASME International Conference on Advanced Intelligent Mechatronics, 2009, pp. 863-868, doi: 10.1109/AIM.2009.5229901
 
 
 
