@@ -50,6 +50,8 @@ Next we must initiate the action index and check the best action against the Q-T
 
 If the random variable is greater than the epsilon or if the episodes are equal number of episodes and the random variable is less than or equal to the success rate then it finds the best action. Otherwise it's going  to select a random action
 
+https://github.com/shaunayodice/ball_and_pipe_control/blob/main/get_action.m
+
 5. Get Reward 
 
 The get reward function compares the current state of the ball to the user's desired state and returns a 1 or -1 point (1 point if it performs the intended action, -1 point if it fails to perform the user's desired action). An if-else statement is included in the function to get reward (If the next state does not equal the terminal, the function returns -1; otherwise, the function returns 1).
