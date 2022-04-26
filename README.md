@@ -42,13 +42,7 @@ The position of the ball will be divided into 21 spots, from 0 to 20. Each posit
 
 4. Get Action
 
-The get_action function has parameters of episodes, number of episodes, quality ‘Q,’ actions, position bins, velocity bins, and fan bins. 
-
-The success rate is set equal to one since it is the highest probability we are trying to achieve. The initial epsilon value is set to a half and the exponential decay is set to the 0.95 that remains.
-
-Next we must initiate the action index and check the best action against the Q-Table.
-
-If the random variable is greater than the epsilon or if the episodes are equal number of episodes and the random variable is less than or equal to the success rate then it finds the best action. Otherwise it's going  to select a random action
+The get_action function has parameters of episodes, number of episodes, quality ‘Q,’ actions, position bins, velocity bins, and fan bins. The success rate is set equal to one since it is the highest probability we are trying to achieve. The initial epsilon value is set to a half and the exponential decay is set to the 0.95 that remains. Next we must initiate the action index and check the best action against the Q-Table. If the random variable is greater than the epsilon or if the episodes are equal number of episodes and the random variable is less than or equal to the success rate then it finds the best action. Otherwise it's going  to select a random action
 
 https://github.com/shaunayodice/ball_and_pipe_control/blob/main/get_action.m
 
