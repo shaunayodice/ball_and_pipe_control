@@ -34,6 +34,7 @@ This file establishes the control variables of the system. These are ball positi
 2. Sample State
 
 The function sample ensures that the ball begins in a different position each time the system is sampled ( Random state initialization).The sample state contains three distinct sample variables. Each variable in the binned state corresponds to a bin (p bins, v bin, and f bin correspond to the p, v, and f samples, respectively). Each bin contains discrete samples, which are chosen at random by the P sample, V sample, and F sample functions and used to calculate the position in the pipe. The function Sample stores the final sample position.
+https://github.com/shaunayodice/ball_and_pipe_control/blob/main/Sample_state.m
 
 3. State Space Size
 
