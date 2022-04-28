@@ -28,7 +28,6 @@ To implement this in MATLAB, the first step is to establish the control variable
 
 # Guide to use the code 
 Steps 
-Highlight: errors with snippets of code, why the error is being caused and what we would do to fix it
 
 1. Binned State
 
