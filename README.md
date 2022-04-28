@@ -93,7 +93,7 @@ Index: \
 ![image](https://user-images.githubusercontent.com/85361948/165790731-87358ada-6778-4134-874f-25c13ff45577.png) \
 We encountered an invalid error in our Index function, which stated that when calling a function, we must use parentheses, despite the fact that we had already used parentheses. This may be an issue with how the data types are set up with our function.
 
-Is Done: 
+Is Done: \
 ![image](https://user-images.githubusercontent.com/85361948/165790869-4e3c4a5d-cc92-4a80-b5af-7d2b55ff756b.png) \
 We encountered an error with an unrecognized variable ‘device’ in our Is_done function.We believe this error is caused by not connecting the device (ball and pipe system) to our computer. One solution to this problem is to conduct additional tests with the actual ball and pipe system to see if we still encounter this issue.
 
@@ -104,7 +104,7 @@ When we ran the sample_state function code we ran into an error that stated ‘r
 Get Reward: 
 
 NO ERRORS here! When next_state is at the desired state, reward equals 1 and otherwise reward returned is -1. 
-![image](https://user-images.githubusercontent.com/85361948/165791166-6f74ae12-d7e9-43f6-b457-0e81dce93b4e.png) \
+![image](https://user-images.githubusercontent.com/85361948/165791166-6f74ae12-d7e9-43f6-b457-0e81dce93b4e.png) 
 
 While the framework for Q learning is properly set up, these errors need to be troubleshooted in order to get the simulation to start reading the values of the control system.
 
