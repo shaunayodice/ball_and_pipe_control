@@ -67,6 +67,16 @@ This code connects the apparatus to the serialport on the device that is running
 This code is the overall top-level entity for the whole project. The purpose of this function is to implement the functionality of Q-Learning. The code calls to all of the other functions that were created for the individual parts of the reinforcement learning. 
 
 #Troubleshooting
+![image](https://user-images.githubusercontent.com/85361948/165789190-a69f2835-f285-4e54-9e58-270f25643c9d.png)
+We encountered an error with the perm function in our q_learning file, whose ideal function is to return a matrix containing all permutations of the elements length(p bins), length(v bins), and length(F bins) in reverse lexicographic order. One solution is to use the perm function separately for each length (bin) and create a matrix called state space that combines all of the values from each perm function of length bin. 
+
+Real world q learning
+![image](https://user-images.githubusercontent.com/85361948/165789533-3225ccfa-ecfe-4b2f-9c30-89be874c65d0.png)
+We encountered an error with an unrecognized variable in our real_world_q_learning file, despite the fact that the variable was initialized. We believe this error is caused by failing to initialize the variable in the correct file location. One solution is to locate the appropriate location in the Matlab file and initialize the variable.
+
+Get action:
+![image](https://user-images.githubusercontent.com/85361948/165789738-e197a7d7-03f3-4d45-84b0-5a93c0e84407.png)
+
 
 
 
