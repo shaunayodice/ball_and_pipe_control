@@ -15,7 +15,7 @@ Q learning is a branch of Reinforcement Learning that uses Q values (also known 
 ![image](https://user-images.githubusercontent.com/85361948/165179507-81ee6117-67b9-4d05-855f-4b4429737a4b.png)
 
 
-As seen from the figure before, the main steps are to initialize a Q-table, pick an action, perform it, and based on the result improve the agent to meet the desired outcome. The Bellman's Equation..
+As seen from the figure before, the main steps are to initialize a Q-table, pick an action, perform it, and based on the result improve the agent to meet the desired outcome. The Bellman's Equation is set up to reward the agent for a desired behavior, and punish the agent for an undesirable wrong.
 
 Application
 
@@ -66,22 +66,44 @@ This code connects the apparatus to the serialport on the device that is running
 
 This code is the overall top-level entity for the whole project. The purpose of this function is to implement the functionality of Q-Learning. The code calls to all of the other functions that were created for the individual parts of the reinforcement learning. 
 
-#Troubleshooting \
+#Troubleshooting and Future Improvements \
 ![image](https://user-images.githubusercontent.com/85361948/165789190-a69f2835-f285-4e54-9e58-270f25643c9d.png) \
 We encountered an error with the perm function in our q_learning file, whose ideal function is to return a matrix containing all permutations of the elements length(p bins), length(v bins), and length(F bins) in reverse lexicographic order. One solution is to use the perm function separately for each length (bin) and create a matrix called state space that combines all of the values from each perm function of length bin. 
 
-Real world q learning \
+Real world q learning: \
 ![image](https://user-images.githubusercontent.com/85361948/165789533-3225ccfa-ecfe-4b2f-9c30-89be874c65d0.png) \
 We encountered an error with an unrecognized variable in our real_world_q_learning file, despite the fact that the variable was initialized. We believe this error is caused by failing to initialize the variable in the correct file location. One solution is to locate the appropriate location in the Matlab file and initialize the variable.
 
-Get action:
-![image](https://user-images.githubusercontent.com/85361948/165789738-e197a7d7-03f3-4d45-84b0-5a93c0e84407.png)
+Get action: \
+![image](https://user-images.githubusercontent.com/85361948/165789738-e197a7d7-03f3-4d45-84b0-5a93c0e84407.png) \
+We encountered an invalid error in our get_action function, which stated that when calling a function, we must use parentheses, despite the fact that we had already used parentheses. This may be an issue with how the data types are set up with our function.
 
+Binned state: \
+![image](https://user-images.githubusercontent.com/85361948/165790370-bef86c62-dc1f-450c-bacc-9d4818544627.png) \
+We encountered an error with an unrecognized variable ‘device’ in our binned_state function.We believe this error is caused by not connecting the device (ball and pipe system) to our computer. One solution to this problem is to conduct additional tests with the actual ball and pipe system to see if we still encounter this issue.
 
+Bellmans: \
+![image](https://user-images.githubusercontent.com/85361948/165790609-03a206ee-7abd-4c46-8b4c-31b186bc7bde.png) \
+When we ran our bellmans function code we ran into an error stating the variable ‘idx0’ is unrecognized. One way to fix this issue is to call the index function inside the bellman's  function then initialize the idx0 variable.
 
+Index: \
+![image](https://user-images.githubusercontent.com/85361948/165790731-87358ada-6778-4134-874f-25c13ff45577.png) \
+We encountered an invalid error in our Index function, which stated that when calling a function, we must use parentheses, despite the fact that we had already used parentheses. This may be an issue with how the data types are set up with our function.
 
-#Future Improvements
+Is Done: \ 
+![image](https://user-images.githubusercontent.com/85361948/165790869-4e3c4a5d-cc92-4a80-b5af-7d2b55ff756b.png) \
+We encountered an error with an unrecognized variable ‘device’ in our Is_done function.We believe this error is caused by not connecting the device (ball and pipe system) to our computer. One solution to this problem is to conduct additional tests with the actual ball and pipe system to see if we still encounter this issue.
 
+Sample State: \
+![image](https://user-images.githubusercontent.com/85361948/165790969-2487049b-0fe0-4bd6-b5a1-3512981d714d.png) \
+When we ran the sample_state function code we ran into an error that stated ‘reference to a cleared variable V_bins’. One of the solutions that is mentioned online is to remove "clear all" from the code. 
+
+Get Reward: 
+
+NO ERRORS here! When next_state is at the desired state, reward equals 1 and otherwise reward returned is -1. \
+![image](https://user-images.githubusercontent.com/85361948/165791166-6f74ae12-d7e9-43f6-b457-0e81dce93b4e.png) \
+
+While the framework for Q learning is properly set up, these errors need to be troubleshooted in order to get the simulation to start reading the values of the control system.
 
 # Contact
 Matthew Buchinski: buchin84@students.rowan.edu \
