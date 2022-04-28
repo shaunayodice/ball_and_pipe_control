@@ -58,10 +58,13 @@ Bellman's Equation is needed to be defined in Matlab and by looking at the figur
 
 Q is the product of the state and action which is just defined as function Q = bellmans(Q, r, s, next_state, a, y). In this case you want to define variables such as r, s, next_state, a and y. Q(idx0,:) = Q(idx0,:) + a*(r + y*max(Q(idx,:)) - Q(idx0,:)); Here are all the parameters Q and all the values in the array. The last step for this code is to equate ‘s’ with ‘next_state.’ 
 
-7. real world q learning - 
+7. Real World Q-Learning
 
+This code connects the apparatus to the serialport on the device that is running the software to control the PWM fan. This code takes in the parameters of the desired height of the ball and the sampling rate of the control actions. Once providing the initial burst to lift the ball, the code initializes a feedback loop that reads the current height of the ball and prepares the code for the transfer function to simulate the ball. The code takes the transfer function calculatesd and simulates it through lsim(), calculates the errors, and updates the action.
 
-8. Q learning - this is the file that calls all of these functions together. 
+8. Q-Learning
+
+This code is the overall top-level enti
 
 #Troubleshooting
 
