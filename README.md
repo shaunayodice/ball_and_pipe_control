@@ -41,11 +41,11 @@ The function sample ensures that the ball begins in a different position each ti
 
 Code for function Sample state : https://github.com/shaunayodice/ball_and_pipe_control/blob/main/Sample_state.m
 
-3. Index
+3. Sample State Space
 
-%There is  a matrix with all the position, velosity and fan speed and the Index function runs through matrix and finds the specific index of the position, velosity and fan speed.
+There is a matrix with values of all the position, velosity and fan speed. The index function runs through matrix and finds the specific index of each of them.
 
-The position of the ball will be divided into 21 spots, from 0 to 20. Each position will be considered as a bin. In each case it will record a velocity pertaining to the bin. The Index will be the number of permutations of each position and velocity. Instantiate S1 S2 S3 bins and the S1 S2 S3 counters. Then we create a for loop that will increase the counters by 1 and set it as a parameter for each bin for every time the ball position increases.
+Since the state space size is three, it will also have to be instantiated as state_variables = 3. The position of the ball will be divided into 21 spots, from 0 to 20. Each position will be considered as a bin. In each case it will record a velocity pertaining to the bin. The Index will be the number of permutations of each position and velocity. Instantiate S1 S2 S3 bins and the S1 S2 S3 counters. Then we create a for loop that will increase the counters by 1 and set it as a parameter for each bin for every time the ball position increases.
 
 Code for function Index : https://github.com/shaunayodice/ball_and_pipe_control/blob/main/index.m
 
