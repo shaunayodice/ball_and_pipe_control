@@ -41,7 +41,7 @@ The function sample ensures that the ball begins in a different position each ti
 
 Code for function Sample state : https://github.com/shaunayodice/ball_and_pipe_control/blob/main/Sample_state.m
 
-3. Sample State Space
+3. Index
 
 There is a matrix with values of all the position, velosity and fan speed. The index function runs through matrix and finds the specific index of each of them.
 
