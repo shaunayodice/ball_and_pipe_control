@@ -64,7 +64,7 @@ This code connects the apparatus to the serialport on the device that is running
 
 8. Q-Learning
 
-This code is the overall top-level enti
+This code is the overall top-level entity for the whole project. The purpose of this function is to implement the functionality of Q-Learning. The code calls to all of the other functions that were created for the individual parts of the reinforcement learning. 
 
 #Troubleshooting
 
