@@ -98,7 +98,7 @@ Is Done: \
 We encountered an error with an unrecognized variable ‘device’ in our Is_done function.We believe this error is caused by not connecting the device (ball and pipe system) to our computer. One solution to this problem is to conduct additional tests with the actual ball and pipe system to see if we still encounter this issue.
 
 Sample State: \
-![image](https://user-images.githubusercontent.com/85361948/165790969-2487049b-0fe0-4bd6-b5a1-3512981d714d.png) \
+![image](https://user-images.githubusercontent.com/85361948/165790969-2487049b-0fe0-4bd6-b5a1-3512981d714d.png) 
 When we ran the sample_state function code we ran into an error that stated ‘reference to a cleared variable V_bins’. One of the solutions that is mentioned online is to remove "clear all" from the code. 
 
 Get Reward: 
