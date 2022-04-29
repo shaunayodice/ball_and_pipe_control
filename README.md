@@ -1,5 +1,5 @@
 # Ball and Pipe Control System 
-The MATLAB codes in this repositiory control a ball and pipe system through serial communication. The apparatus that physical runs the MATLAB code is made of a vertical cylinder with a ping pong ball controlled by a PWM fan on the base of the cylinder and the height of the ball is measured by a time of flight sensor at the top of the clyinder. An image of the apparatus is shown in the figure below. The objective of this control system is to balance the ball at a target altitude without oscillation. 
+The MATLAB codes in this repositiory controls a ball and pipe system through serial communication. The apparatus that physical runs the MATLAB code is made of a vertical cylinder with a ping pong ball controlled by a PWM fan on the base of the cylinder and the height of the ball is measured by a time of flight sensor at the top of the clyinder. An image of the apparatus is shown in the figure below. The objective of this control system is to balance the ball at a target altitude without oscillation. 
 
 ![image](https://user-images.githubusercontent.com/85361948/165792705-d0223b4c-456b-4d7c-b807-b0f6fce2f091.png)
 
