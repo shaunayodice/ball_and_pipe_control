@@ -53,6 +53,8 @@ Code for function Index : https://github.com/shaunayodice/ball_and_pipe_control/
 
 The get_action function has parameters of episodes, number of episodes, quality ‘Q,’ actions, position bins, velocity bins, and fan bins. The success rate is set equal to one since it is the highest probability we are trying to achieve. The initial epsilon value is set to a half and the exponential decay is set to the 0.95 that remains. Next we must initiate the action index and check the best action against the Q-Table. If the random variable is greater than the epsilon or if the episodes are equal number of episodes and the random variable is less than or equal to the success rate then it finds the best action. Otherwise it's going  to select a random action.
 
+We also included in this function epsilon which is initialized to 0.5. Epsilon affects how often the system chooses exploitation over exploration. To change epsilon, we incorporated a decay factor of 0.95 to update the epsilon value after each iteration. 
+
 Code for function Get Action : https://github.com/shaunayodice/ball_and_pipe_control/blob/main/get_action.m
 
 5. Get Reward 
@@ -68,6 +70,8 @@ Bellman's Equation is needed to be defined in Matlab and by looking at the figur
 ![image](https://user-images.githubusercontent.com/85361948/165178025-aa40c955-267b-4b74-a1b6-95fa9368b7a2.png)
 
 Q is the product of the state and action which is just defined as function Q = bellmans(Q, r, s, next_state, a, y). In this case you want to define variables such as r, s, next_state, a and y. Q(idx0,:) = Q(idx0,:) + a*(r + y*max(Q(idx,:)) - Q(idx0,:)); Here are all the parameters Q and all the values in the array. The last step for this code is to equate ‘s’ with ‘next_state.’ 
+
+In the bellman’s equation, the discount factor is a variable that affects how much the system cares about rewards in the distant future and the immediate future. The closer the value is to 0, the more it cares about the immediate values. For our system, we had the discount factor very low at 0.1. The learning rate is the rate at which the system learns. The closer to 1, the faster it learns, and at 0 it does not learn. Our learning rate was 0.01, which probably should have been closer to 0.5 to begin with. 
 
 Code for function Bellman's Eq : https://github.com/shaunayodice/ball_and_pipe_control/blob/main/bellmans.m
 
